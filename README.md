@@ -84,14 +84,14 @@ Buka folder database lalu pilih migration
 Carilah table siswas
 Lalu buka dan tambahka setelah id beriktut
 
-$tabel->string('nama');
+"$tabel->string('nama');"
 
 Ket: string adalah tipe datanya, dan nama adalah nama columnya
 
 Setelah membaut column
 Lalu buaka kembali terminal dan ketikkan
 
-php artisan migrate
+"php artisan migrate"
 
 Maka anda akan mempunyai tabel yang bernama siswas
 
@@ -99,16 +99,23 @@ Maka anda akan mempunyai tabel yang bernama siswas
 
 Silahkan ketikkan :
 
-php artisan migrate:rollback
+"php artisan migrate:rollback"
 
 Perintah tersebut akan membatalkan migration sebelumnya
 Jadi tabel siswas akan di hapus
 
-## Cara cepat membuat migratin
+"php artisn migrate:fresh"
+
+Perintah migrate:freshh akan rollback semua tabel lalu di migrate kembali
+
+## Cara cepat membuat migratin dan kawan-kawannya
 
 Ketikkan perintah berikut :
 
-php artisan make:model Mahasiswa --all
+"php artisan make:model Mahasiswa --all"
+"php artisan make:model Mahasiswa --mc"
 
-Maka laravel akan membuatkan model, migratin, controller, policy dll
-dengan satu kali perintah tersebut, ajaib bukan
+Maka laravel akan membuatkan model, migration, controller, policy dll
+dengan satu kali perintah tersebut, ajaib bukan 😂
+
+Kalau menggunaka --mc maka laravel hanya cuma membuat, model, migration, dan controller
